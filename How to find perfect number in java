@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class FindPerfectNumber {
+
+	public static void main(String[] args) {
+		
+		int num;
+		int i = 1, total = 0;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Welcome. Please enter a number:");
+		
+		num = scan.nextInt();
+		
+		while ( i <= num - 1 )
+		{
+			if ( num % i == 0 )
+			{
+				total = total + i;
+			}
+			i++;
+		}
+		
+		System.out.println("Value entered: "+num);
+		
+		if ( num == total )
+		{
+			System.out.print("This number is perfect");
+		}
+		else
+		{
+			System.out.print("This number isn't perfect.");
+		}
+			
+	}
+
+}
